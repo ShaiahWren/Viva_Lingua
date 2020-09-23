@@ -5,11 +5,6 @@ const password = "";
 
 
 
-
-
-
-
-
 const pgp = require('pg-promise') ({
     query: function (event) {
         console.log("QUERY:", event.query);

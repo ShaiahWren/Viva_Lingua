@@ -4,6 +4,16 @@ const hostname = "127.0.0.1";
 const port = 3000;
 
 
+
+const morgan = require("morgan");
+
+const helmet = require("helmet");
+const session = require("express-session");
+const FileStore = require("session-file-store")(session);
+const cookieParser = require("cookie-parser");
+
+const logger = morgan("tiny");
+
 const express = require('express');
 const es6Renderer = require("express-es6-template-engine");
 const app = express();
@@ -30,14 +40,7 @@ app.use(
 );
 
 
-const express = require('express');
-const es6Renderer = require("express-es6-template-engine");
-const morgan = require("morgan");
-const logger = morgan("tiny");
-const helmet = require("helmet");
-const session = require("express-session");
-const FileStore = require("session-file-store")(session);
-const cookieParser = require("cookie-parser");
+
 
 
 const server = http.createServer(app);
@@ -49,10 +52,10 @@ server.listen(port, hostname, () => {
 });
 
 // Controller Creator
-const usersController = require("./routes/users");
-//const usersController = require("./routes/users");
+const usersController = require("./routes/usersRoute");
+const indexController = require("./routes/index");
 
 // Use Controllers
-//app.use("/users", usersController);
+app.use("/users", usersController);
 app.use("/", indexController);
 

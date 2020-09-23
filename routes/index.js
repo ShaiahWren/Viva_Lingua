@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
             is_logged_in: req.session.is_logged_in
         },
         partials: {
-            partial: "partial-index"
+            partial: "partial-login"
         }
     });
 });

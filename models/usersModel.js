@@ -38,6 +38,7 @@ class UsersModel {
             if (!!isValid) {
                 // (!!IsValid) = if (isValid === absolutely, completely, 100% TRUE)
                 const { user_name, id  } = response;
+                console.log("This is response: ", response);
                 return { isValid, user_name, user_id: id}
             } else {
                 return { isValid }

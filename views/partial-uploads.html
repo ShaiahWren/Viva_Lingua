@@ -1,0 +1,33 @@
+<div class="wrapper">
+    <form action="/uploads" method="POST" ref="uploadForm" encType="multipart/form-data">
+        <label>
+            Language
+            <select name="language" id="" name="language">
+                
+                <option value="3">Afrikaans</option>
+                <option value="4">Yiddish</option>
+                <option value="2">Mi'kmaq</option>
+                <option value="1">Basque</option>
+            </select>
+        </label>
+        <label>
+            Title
+            <input type="text" name="title">
+        </label>
+        <label>
+            Description
+            <input type="text" name="description">
+        </label>
+        <label>
+            Type
+            <select name="type" id="">
+                <option value="1">Text</option>
+                <option value="2">Audio</option>
+                <option value="3">Video</option>
+                <option value="4">Image</option>
+            </select>
+            <input type="file" name="filename">
+            <button type="submit">Submit</button>
+        </label>
+    </form>
+</div>

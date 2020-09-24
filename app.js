@@ -4,7 +4,7 @@ const hostname = "127.0.0.1";
 const port = 3000;
 
 
-
+const fileUpload = require("express-fileupload");
 const morgan = require("morgan");
 
 const helmet = require("helmet");
@@ -39,7 +39,9 @@ app.use(
     })
 );
 
+app.use(fileUpload({
 
+}));
 
 
 
@@ -54,8 +56,11 @@ server.listen(port, hostname, () => {
 // Controller Creator
 const usersController = require("./routes/usersRoute");
 const indexController = require("./routes/index");
+const uploadController = require("./routes/contentRoute");
+//const bulma
 
 // Use Controllers
+app.use("/uploads", uploadController);
 app.use("/users", usersController);
 app.use("/", indexController);
 

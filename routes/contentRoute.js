@@ -21,12 +21,12 @@ router.get("/", (req, res) => {
 
 
 router.get("/content", async function (req, res, next) {
-    const data = await contentModel.getAll();
+    //const data = await contentModel.getAll();
   
     res.render("template", {
       locals: {
         title: "VivaLingua",
-        data: data,
+       // data: data,
       },
       partials: {
         partial: "partial-maincontent",

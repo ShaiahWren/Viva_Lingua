@@ -39,7 +39,7 @@ router.get("/logout", (req, res) => {
 
 
 router.post("/signup", (req, res) => {
-    const {user_name, email, password} = req.body;
+    const { user_name, email, password} = req.body;
     
     // Salt and Hash our passwords
     const salt = bcrpyt.genSaltSync(10);
@@ -66,7 +66,7 @@ router.post("/signup", (req, res) => {
     userInstance.login().then(response => {
         req.session.is_logged_in = response.isValid;
         if (!!response.isValid) {
-            const {user_name, user_id} = response;
+            const { user_name, user_id } = response;
             req.session.user_name = user_name;
             req.session.user_id = user_id;
             res.redirect("/")

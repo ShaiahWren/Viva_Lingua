@@ -1,3 +1,4 @@
+'use strict'
 const express = require("express");
 const router = express.Router();
 
@@ -6,6 +7,7 @@ const PostsModel = require("../models/contentModel");
 
 
 router.get("/", (req, res) => {
+    console.log("1st req.session: ", req.session);
     res.render("template", {
       locals: {
         title: "Post a LangSource",
@@ -36,7 +38,8 @@ router.get("/content", async function (req, res, next) {
 
   router.post("/", async function (req, res) {
       const { user_id } = req.session;
-    const { title, description, language, type, filename } = req.body;
+    console.log("req session is: ", req.session)
+    const { title, description, language, type } = req.body;
     const newId = parseInt(user_id);
   
     const uploadData = await PostsModel.postData(
@@ -45,10 +48,9 @@ router.get("/content", async function (req, res, next) {
       description,
       language,
       type,
-      filename
+      req.files.filename.name
     );
-    console.log(uploadData);
-    console.log(req.body, req.files)
+ 
 
     res.sendStatus(200);
   });

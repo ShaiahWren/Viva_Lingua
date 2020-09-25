@@ -49,11 +49,13 @@ class UsersModel {
         }
     }
 
-    async Profile(user_name) {
+
+    static async profile() {
         try {
-            const response = await db.any(`SELECT user_name FROM users WHERE user_name = $1;`, [user_name]);
+            const response = await db.one(`SELECT * FROM users WHERE user_name = 'dylan';`);
             console.log("PROFILES RESPONSE IS", response);
-            return response
+            return response;
+
         } catch(error) {
             console.error("ERROR: ", error.message);
             return error.message;

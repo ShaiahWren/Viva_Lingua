@@ -32,6 +32,26 @@ router.get("/", (req, res) => {
     });
   });
 
+  router.get("/profile", (req, res) => {
+    const profileData = UsersModel.profile();
+    console.log("PROFILE DATA IS: ", profileData);
+    res.render("template", {
+      locals: {
+        title: "Hello User",
+        data: profileData,
+        is_logged_in: req.session.is_logged_in
+      },
+      partials: {
+        partial: "partial-profile",
+      },
+    });
+  });
+
+
+
+
+
+
 router.get("/logout", (req, res) => {
     req.session.destroy();
     res.redirect("/users/login");
@@ -69,7 +89,7 @@ router.post("/signup", (req, res) => {
             const { user_name, user_id } = response;
             req.session.user_name = user_name;
             req.session.user_id = user_id;
-            res.redirect("/")
+            res.redirect("/uploads/content")
         } else {
             res.sendStatus(401);
         }

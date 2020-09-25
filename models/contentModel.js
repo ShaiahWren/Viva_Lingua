@@ -34,6 +34,17 @@ class PostsModel {
         }
     }
 
+    static async getDynPost(user_id) {
+        try {
+            const response = await db.any(`SELECT * FROM posts INNER JOIN users ON users.id = posts.user_id WHERE user_id = ${user_id}`)
+            console.log("Dynamic Posts: ", response);
+            return response;
+        } catch(error) {
+            console.error("DYNAMIC ERROR: ", error.message);
+            return error.message;
+        }
+    }
+
 }
 
 

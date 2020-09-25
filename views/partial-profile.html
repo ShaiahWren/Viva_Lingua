@@ -1,9 +1,20 @@
 
 
 <div class="wrapper">
-    <h1>${title}</h1>
+<br>
+    <h1>Hello ${profdata.user_name}</h1>
 
-  <p> ${profdata.user_name} ${profdata.email} </p>
+  <p>  ${profdata.email} </p>
 
 </div>
       
+<br>
+<br>
+
+<div class="card">
+<section class="profilePosts"> ${postsData.map(post => {
+        return `<div class="username"><h3><strong>${post.user_name}</strong></div></h3><h4>${post.title}</h4> ${post.description}`
+    }).join('')}</section>
+      
+</div>
+

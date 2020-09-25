@@ -30,16 +30,6 @@ body::-webkit-scrollbar {
 }
 
 
-
-body {
-    background: #efefef;
-    margin: 0;
-}
-
-body::-webkit-scrollbar {
-    display: none;
-}
-
 /* OUR TEAM */
 
 .text {

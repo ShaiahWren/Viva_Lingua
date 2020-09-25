@@ -3,6 +3,7 @@ const router = express.Router();
 const bcrpyt = require("bcryptjs");
 
 const UsersModel = require("../models/usersModel");
+const PostsModel = require("../models/contentModel");
 
 router.get("/", (req, res) => {
     res.redirect("/users/signup");
@@ -35,12 +36,15 @@ router.get("/", (req, res) => {
   router.get("/profile", async (req, res) => {
     const { user_id } = req.session;
     const profileData = await UsersModel.profile(user_id);
+    const dynamicPostsData = await PostsModel.getDynPost(user_id);
     console.log("req session is: ", req.session);
     console.log("PROFILE DATA IS: ", profileData);
+    console.log("dyn posts data is: ", dynamicPostsData);
     res.render("template", {
       locals: {
         title: "Hello User",
         profdata: profileData,
+        postsData: dynamicPostsData,
         is_logged_in: req.session.is_logged_in
       },
       partials: {

@@ -1,6 +1,4 @@
 
-
-
     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -58,8 +56,6 @@
   </div>
 </nav>
 
-
-
   <div class="card">
   <div class="card-image">
     <figure class="image is-4by3">
@@ -75,15 +71,15 @@
       </div>
       <div class="media-content">
         <p class="title is-4">John Smith</p>
-        <p class="subtitle is-6">@johnsmith</p>
+        <p class="subtitle is-6">Username Placeholder</p>
       </div>
     </div>
 
     <div class="content">
-      <h2> ${data.map(post => {
-        return `<ul><li>${post.title} ${post.description}</li></ul>`
-    }).join('')}</h2>
-      <a href="#">#css</a> <a href="#">#responsive</a>
+      <p> ${data.map(post => {
+        return `<h3><strong>${post.user_name}</strong></h3><h4>${post.title}</h4> ${post.description}`
+    }).join('')}</p>
+      
       <br>
       <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
     </div>
@@ -92,7 +88,6 @@
     
         <button><a href="/users/logout">LogOut</a></button>
     
-        <button><a href="/usersRoute/login">LogIn</a></button>
-        <button><a href="/usersRoute/signup">SignUp</a></button>
+        
     
 </div>

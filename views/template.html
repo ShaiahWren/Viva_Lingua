@@ -5,11 +5,11 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"> 
         <link rel="stylesheet" href="./css/style.css">
     </head>
-    ${!!is_logged_in ? `<header>
+    <header>
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
               <a class="navbar-item" href="https://bulma.io">
-                <img src="https://bulma.io/images/bulma-logo.png" width="75" height="50">
+                <img src="" width="75" height="50">
               </a>
           
               <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -46,7 +46,7 @@
               <div class="navbar-end">
                 <div class="navbar-item">
                   <div class="buttons">
-                    <a class="button is-primary">
+                    <a class="button is-primary" href="/users/logout">
                       <strong>Log out</strong>
                     </a>
                    
@@ -54,9 +54,10 @@
                 </div>
               </div>
             </div>
-          </nav>`
-          :`<p></p>`}
+          </nav>
+          <p></p>
        </header>
+    <title>${title}</title>
     <body>
         ${partial}
     </body>

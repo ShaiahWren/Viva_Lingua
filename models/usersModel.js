@@ -49,16 +49,16 @@ class UsersModel {
         }
     }
 
-    // async Profile() {
-    //     try {
-    //         const response = await db.one(`SELECT user_name FROM users;`)
-    //         console.log("PROFILES RESPONSE IS", response);
-    //         return response
-    //     } catch(error) {
-    //         console.error("ERROR: ", error.message);
-    //         return error.message;
-    //     }
-    // }
+    static async profile() {
+        try {
+            const response = await db.one(`SELECT * FROM users WHERE user_name = 'dylan';`);
+            console.log("PROFILES RESPONSE IS", response);
+            return response;
+        } catch(error) {
+            console.error("ERROR: ", error.message);
+            return error.message;
+        }
+    }
 }
 
 

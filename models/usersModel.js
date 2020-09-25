@@ -49,9 +49,9 @@ class UsersModel {
         }
     }
 
-    static async profile() {
+    static async profile(id) {
         try {
-            const response = await db.one(`SELECT * FROM users WHERE user_name = 'dylan';`);
+            const response = await db.one(`SELECT * FROM users WHERE id = ${id}`);
             console.log("PROFILES RESPONSE IS", response);
             return response;
         } catch(error) {

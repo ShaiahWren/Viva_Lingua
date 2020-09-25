@@ -31,6 +31,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(
     session({
+        store: new FileStore(),
         secret: "super cool",
         resave: false,
         saveUninitialized: true,

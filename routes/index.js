@@ -16,7 +16,7 @@ router.get("/", (req, res) => {
 router.get("/about", (req, res) => {
     res.render("template", {
         locals: {
-            title: "About the Project",
+            title: "",
             is_logged_in: req.session.is_logged_in
         },
         partials: {

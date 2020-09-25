@@ -32,13 +32,15 @@ router.get("/", (req, res) => {
     });
   });
 
-  router.get("/profile", (req, res) => {
-    const profileData = UsersModel.profile();
+  router.get("/profile", async (req, res) => {
+    const { user_id } = req.session;
+    const profileData = await UsersModel.profile(user_id);
+    console.log("req session is: ", req.session);
     console.log("PROFILE DATA IS: ", profileData);
     res.render("template", {
       locals: {
         title: "Hello User",
-        data: profileData,
+        profdata: profileData,
         is_logged_in: req.session.is_logged_in
       },
       partials: {

@@ -1,4 +1,64 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+    background-color: #428CD4;
+}
+
+.header {
+    background-color: #428CD4;
+    /* color: #464345; */
+    margin: 0 auto 8px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    align-items: center;
+    width: 100%;
+    /* height: auto; */
+}
+
+
+body {
+    background: #efefef;
+    margin: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+
+
 .navbar-end {
     display: flex;
     justify-content: right;
+}
+
+.card1 {
+    margin: 80px;
+    width: fit-content;
+}
+
+/* body {
+    color: red;
+    background-color: aquamarine;
+} */
+
+
+.card {
+    justify-content: center;
+    text-align: center;
+}
+
+
+.username {
+    color: rgba(194, 72, 6, 0.708);
 }

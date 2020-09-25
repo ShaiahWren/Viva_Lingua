@@ -1,4 +1,4 @@
-
+<nav>
     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -39,6 +39,11 @@
         </div>
       </div>
     </div>
+    <section class="profilePosts"> ${postsData.map(post => {
+        return `<h3><strong>${post.user_name}</strong></h3><h4>${post.title}</h4> ${post.description}`
+    }).join('')}</section>
+      
+</div>
   
 
     <div class="navbar-end">
@@ -55,39 +60,3 @@
     </div>
   </div>
 </nav>
-
-  <div class="card">
-  <div class="card-image">
-    <figure class="image is-4by3">
-      <img src="https://images.unsplash.com/photo-1558443957-d056622df610?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60s" alt="Placeholder image">
-    </figure>
-  </div>
-  <div class="card-content">
-    <div class="media">
-      <div class="media-left">
-        <figure class="image is-48x48">
-          <img src="https://images.unsplash.com/photo-1525382455947-f319bc05fb35?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Placeholder image">
-        </figure>
-      </div>
-      <div class="media-content">
-        <p class="title is-4">John Smith</p>
-        <p class="subtitle is-6">Username Placeholder</p>
-      </div>
-    </div>
-
-    <div class="content">
-      <p> ${data.map(post => {
-        return `<h3><strong>${post.user_name}</strong></h3><h4>${post.title}</h4> ${post.description}`
-    }).join('')}</p>
-      
-      <br>
-      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-    </div>
-  </div>
-
-    
-        <button><a href="/users/logout">LogOut</a></button>
-    
-        
-    
-</div>

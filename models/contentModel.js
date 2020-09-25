@@ -39,4 +39,3 @@ class PostsModel {
 
 
 module.exports = PostsModel;
-

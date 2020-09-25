@@ -48,6 +48,17 @@ class UsersModel {
             return error.message;
         }
     }
+
+    async Profile(user_name) {
+        try {
+            const response = await db.any(`SELECT user_name FROM users WHERE user_name = $1;`, [user_name]);
+            console.log("PROFILES RESPONSE IS", response);
+            return response
+        } catch(error) {
+            console.error("ERROR: ", error.message);
+            return error.message;
+        }
+    }
 }
 
 

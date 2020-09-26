@@ -33,6 +33,8 @@ router.get("/", (req, res) => {
     });
   });
 
+
+
   router.get("/profile", async (req, res) => {
     const { user_id } = req.session;
     const profileData = await UsersModel.profile(user_id);

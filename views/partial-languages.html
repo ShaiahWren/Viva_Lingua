@@ -6,6 +6,9 @@
  
  
  
- <section class="profilePosts"> ${data.map(post => {
-        return `<h3><strong>${post.user_name}</strong></h3><h4>${post.title}</h4> ${post.description}`
+<div class="card">
+<section> ${data.map(post => {
+        return `<h2>${post.user_name}</h2> <h4>${post.title}</h4> ${post.description}`
     }).join('')}</section>
+      
+</div>

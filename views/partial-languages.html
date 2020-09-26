@@ -1,0 +1,11 @@
+ <select>
+ <option>1</option>
+ <option>2</option>
+
+ </select>
+ 
+ 
+ 
+ <section class="profilePosts"> ${data.map(post => {
+        return `<h3><strong>${post.user_name}</strong></h3><h4>${post.title}</h4> ${post.description}`
+    }).join('')}</section>

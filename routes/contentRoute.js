@@ -36,6 +36,21 @@ router.get("/content", async function (req, res, next) {
     });
   });
 
+
+  router.get("/languages", async function (req, res) {
+    const postsData = await PostsModel.getAllPosts();
+    res.render("template", {
+        locals: {
+            title: "Languages",
+            data: postsData,
+            is_logged_in: req.session.is_logged_in
+        },
+        partials: {
+            partial: "partial-languages"
+        }
+    });
+});
+
   router.post("/", async function (req, res) {
       const { user_id } = req.session;
     console.log("req session is: ", req.session)
@@ -52,7 +67,7 @@ router.get("/content", async function (req, res, next) {
     );
  
 
-    res.sendStatus(200);
+    res.redirect('/uploads/content');
   });
 
 

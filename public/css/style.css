@@ -5,7 +5,7 @@ html {
     font-size: 16px;
     box-sizing: border-box;
     font-family: 'Noto Sans TC', sans-serif;
-    background-color: #428CD4;
+    background-color:  #800080;
 }
 
 .header {
@@ -410,21 +410,33 @@ profile posts */
     color: rgba(11, 69, 157, 0.708);
     font-family: Palatino;
     font-size: 150%;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     margin-bottom: 0%;
     margin-top: 3%;
 }
 
 .description {
     color: rgb(2, 10, 31);
-    margin-bottom: 5%;
+    /* margin-bottom: 5%; */
+    margin: 0;
+    /* padding: 8px; */
 }
 
 .poststitle {
     margin-top: 0%;
     margin-bottom: 2%;
-    margin-left: 1%;
+    /* margin-left: 1%; */
     text-decoration: underline;
+}
+
+.divcard {
+    margin: 50px auto;
+    width: 500px;
+    height: 250px;
+    padding: 0px 34px;
+    padding-top: 16px;
+    background-color: white;
+    border-radius: 8px;
 }
 
 

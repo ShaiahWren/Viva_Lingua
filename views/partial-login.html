@@ -1,24 +1,41 @@
  <div class="wrapper">
-    <h1>${title}</h1>
-    <form action="/users/login" method="POST" class="form">
+    <!-- <h1>${title}</h1> -->
+
+    <div class="login">
+
+      <form action="/users/login" method="POST" class="form">
+          <label class="label">
+            <img src="/images/vivalingua.jpg" class="item">
+          </label> 
+          <label class="label">
+            <p class="item"><em>A crowdsourcing app to celebrate linguistic revitalization efforts</em></p>
+          </label>
 
 
-    <label>Username
-        <input type="text" name="user_name" placeholder="dylanc"></input>
+          <label class="label">
+              <input type="text" name="user_name" placeholder="USERNAME"></input>
+          </label>
+
+          <label class="label">
+              <input type="password" name="password" placeholder="PASSWORD"></input>
+          </label>
+
+          <label class="label">
+            <button type="submit" class="button">LOGIN</button>
+          </label>
+
+      </form>
+  <div>
+
+  <div class="signup">
+    <label class="label">
+      <p class>or</p>
     </label>
-
-    <label>Password
-        <input type="password" name="password" placeholder="****"></input>
+    <label class="label">
+      <a href="/users/signup" class="item">Sign Up</a>
     </label>
-
-    <button type="submit">Login</button>
-
-    
-    </form>
-
- <p>or</p>
-    <a href="/users/signup">Sign Up</a>
-
   </div>
+  
+    </div>
 
 </div> 

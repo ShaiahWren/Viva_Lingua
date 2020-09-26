@@ -9,18 +9,16 @@ html {
 }
 
 .header {
-    background-color: #428CD4;
-    /* color: #464345; */
-    margin: 0 auto 8px;
-    position: fixed;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    /* justify-content: center; */
-    align-items: center;
-    width: 100%;
-    /* height: auto; */
+    background-color: #800080;
+    color: #efefef;
+    /* margin: 0 auto 8px; */
+    /* position: fixed; */
+    /* top: 0; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+    /* align-items: center; */
+    /* width: 100%; */
 }
 
 
@@ -103,6 +101,10 @@ input {
     background-color: #eee;
   }
 
+input:focus {
+    outline: none;
+}
+
 button {
     background-color: #800080;
     color: #efefef;
@@ -115,8 +117,10 @@ button {
 
 
 .navbar-end {
-    display: flex;
-    justify-content: right;
+    margin: 0;
+    width: 100%;
+    text-align: right;
+    /* padding-top: 8px; */
 }
 
 .card1 {
@@ -148,4 +152,45 @@ button {
 
 .username {
     color: rgba(218, 135, 11, 0.708);
+}
+
+
+
+
+/* nav-bar */
+
+
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.navbar-menu {
+    margin-left: 0;
+    text-align: center;
+    /* padding: 8px; */
+}
+
+.navbar-item {
+    color: #efefef;
+    text-decoration: none;
+    padding: 8px;
+}
+.navbar-brand {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    
+}
+
+.logo {
+    float: left;
+}
+
+.links {
+    padding: 8px;
 }

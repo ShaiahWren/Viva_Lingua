@@ -47,7 +47,7 @@ class PostsModel {
 
     static async getDynLang() {
         try {
-            const response = await db.any(`SELECT * FROM posts LEFT JOIN users ON posts.user_id = users.id WHERE language = 4;`)
+            const response = await db.any(`SELECT * FROM posts LEFT JOIN users ON posts.user_id = users.id WHERE language = 1;`)
             return response;
 
         } catch(error) {

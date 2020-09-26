@@ -1,7 +1,7 @@
 'use strict'
 const express = require("express");
 const router = express.Router();
-
+const fs = require("fs");
 
 const PostsModel = require("../models/contentModel");
 
@@ -66,6 +66,13 @@ router.get("/content", async function (req, res, next) {
       type,
       req.files.filename.name
     );
+    // console.log("REQ FILES ARE: ", req)
+    // fs.copyFile(`${req.files.filename.path}`, `/Users/dylancooper/Desktop/DigitalCrafts/VivaLingua/VivaLingua/public/media/3${req.files.filename.name}`, (error) => {
+    //   if (error)
+    //   //console.log("TEST ERROR; ", error);
+    //    throw error;  
+      
+    // });
  
 
     res.redirect('/uploads/content');

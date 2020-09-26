@@ -11,7 +11,7 @@ const helmet = require("helmet");
 const session = require("express-session");
 const FileStore = require("session-file-store")(session);
 const cookieParser = require("cookie-parser");
-
+const fs = require("fs");
 const logger = morgan("tiny");
 
 const express = require('express');
@@ -64,3 +64,7 @@ const scripts = require('./scripts');
 app.use("/uploads", uploadController);
 app.use("/users", usersController);
 app.use("/", indexController);
+
+
+
+

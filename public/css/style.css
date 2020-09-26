@@ -40,13 +40,52 @@ body::-webkit-scrollbar {
     justify-content: center;
     color: #464345;
     font-weight: bolder;
+    text-align: center;
+    margin: 0 auto;
+    padding: 12px;
+}
 
+.login-wrapper {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 8px;
+    margin: 120px auto;
 }
 
 .login {
     display: flex;
     justify-content: center;
 }
+
+.signup {
+    background-color: #800080;
+    color: #efefef;
+    width: 150px;
+    padding: 8px;
+    font-weight: bolder;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    font-size: smaller;
+}
+
+
+
+.p-or {
+  
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #464345; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+ } 
+ 
+ .p-or span { 
+     background:#efefef; 
+     padding:0 10px; 
+     color: #464345 ;
+ }
 
 .label {
     display: flex;

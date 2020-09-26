@@ -27,17 +27,6 @@ router.get("/about", (req, res) => {
 
 
 
-router.get("/", (req, res) => {
-    res.render("template", {
-        locals: {
-            title: "Languages",
-            is_logged_in: req.session.is_logged_in
-        },
-        partials: {
-            partial: "partial-languages"
-        }
-    });
-});
 
 
 

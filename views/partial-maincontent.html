@@ -55,14 +55,21 @@
       </nav>
       <p></p>
    </header> 
-
-
-
-
-
-    <section class="profilePosts"> ${data.map(post => {
-        return `<h3><strong>${post.user_name}</strong></h3><h4>${post.title}</h4> ${post.description} <img src="/media/${post.filename}" widith=100px height=100px>`
+    <div class="card">
+<section class="profilePosts"> ${data.map(post => {
+        return `<div class="divcard"><div><h3 class="username"><strong>${post.user_name}</strong></h3></div>
+        <h4 class="poststitle">${post.title}</h4>
+        <div><p class="description">${post.description}</p></div></div>`
     }).join('')}</section>
+      
+</div>
+
+
+
+
+    {% comment %} <section class="profilePosts"> ${data.map(post => {
+        return `<h3><strong>${post.user_name}</strong></h3><h4>${post.title}</h4> ${post.description} <img src="/media/${post.filename}" widith=100px height=100px>`
+    }).join('')}</section> {% endcomment %}
       
 </div>
   

@@ -2,7 +2,16 @@
 const express = require("express");
 const router = express.Router();
 const fs = require("fs");
-
+const multer = require("multer");
+const storage = multer.diskStorage({
+  destination: function(req, file, cb) {
+      cb(null, 'media/');
+  },
+  filename: function(req, file, cb) {
+      cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+  }
+});
+const path = require("path");
 const PostsModel = require("../models/contentModel");
 
 
@@ -57,7 +66,14 @@ router.get("/content", async function (req, res, next) {
     console.log("req session is: ", req.session)
     const { title, description, language, type } = req.body;
     const newId = parseInt(user_id);
-  
+    // let upload = multer({storage: storage}).single('filename');
+    //   upload(req, res, function(err) {
+    //     if (err) {
+    //       console.log("callback error: ", err);
+    //       return err;
+    //     }
+    //     res.send(`You have uploaded this file: <img src="${req.filename.path}"`)
+    //   })
     const uploadData = await PostsModel.postData(
       newId,
       title,

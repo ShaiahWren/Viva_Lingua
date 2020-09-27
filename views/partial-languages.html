@@ -66,9 +66,9 @@
  
  
  
-<div class="card">
-<section> ${data.map(post => {
-        return `<h2>${post.user_name}</h2> <h4>${post.title}</h4> ${post.description}`
+ <div class="card">
+<section class="profilePosts"> ${data.map(post => {
+        return `<div class="divcard"><div><h3 class="username"><strong>${post.user_name}</strong></h3></div>
+        <h4 class="poststitle">${post.title}</h4>
+        <div><p class="description">${post.description}</p></div></div>`
     }).join('')}</section>
-      
-</div>

@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
     console.log("1st req.session: ", req.session);
     res.render("template", {
       locals: {
-        title: "Post a LangSource",
+        title: "CREATE POST",
         is_logged_in: req.session.is_logged_in
       },
       partials: {

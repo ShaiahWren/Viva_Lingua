@@ -1,3 +1,6 @@
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@700&display=swap" rel="stylesheet">
+
+
 
   <header class="header">
     <nav class="navbar" role="navigation" aria-label="main navigation">
@@ -20,6 +23,9 @@
             </section>
             
             <div class="links">
+              <a class="navbar-item" href="/uploads/content">
+                Feed
+              </a>
               <a class="navbar-item" href="/uploads/languages">
                 Languages
               </a>
@@ -57,44 +63,57 @@
    </header> 
 
 
-<br>
-<br>
+<!-- <br>
+<br> -->
 <div class="wrapper">
-<p>Am i logged in? ${is_logged_in} </p>
-<br>
-<h2>${title}</h2>
-<br>
-
-    <form action="/uploads" method="POST" ref="uploadForm" encType="multipart/form-data">
-        <label>
-            Language
-            <select name="language" id="" name="language">
+    <!-- <p>Am i logged in? ${is_logged_in} </p>
+    <br>
+    <h2>${title}</h2>
+    <br> -->
+    <div class="login-wrapper">
+      <div class="uploads">
+        <form action="/uploads" method="POST" ref="uploadForm" encType="multipart/form-data" class="">
+            <label class="label-1">
+                 <p class="language">Language</p>
+                <select name="language" id="" name="language">
+                    
+                    <option value="3">Afrikaans</option>
+                    <option value="4">Yiddish</option>
+                    <option value="2">Mi'kmaq</option>
+                    <option value="1">Basque</option>
+                </select>
+            </label>
+            <label class="label">
                 
-                <option value="3">Afrikaans</option>
-                <option value="4">Yiddish</option>
-                <option value="2">Mi'kmaq</option>
-                <option value="1">Basque</option>
-            </select>
-        </label>
-        <label>
-            Title
-            <input type="text" name="title">
-        </label>
-        <label>
-            Description
-            <input type="text" name="description">
-        </label>
-        <label>
-            Type
-            <select name="type" id="">
-                <option value="1">Text Content</option>
-                <option value="2">Audio</option>
-                <option value="3">Video</option>
-                <option value="4">Image</option>
-            </select>
-            <input id="upload" type="file" name="filename">
-            <input type="checkbox" name="filename" value="-">No Media File</input>
-            <button type="submit">Submit</button>
-        </label>
-    </form>
+                <input  class="title" type="text" name="title" placeholder="Add a title">
+            </label>
+            <label class="label">
+                
+                <input class="title" type="text" name="description" placeholder="Add a description">
+            </label>
+            <label class="label">
+                 <p class="language">Type</p>
+                <select name="type" id="" class="">
+                    <option value="1">Text Content</option>
+                    <option value="2">Audio</option>
+                    <option value="3">Video</option>
+                    <option value="4">Image</option>
+                </select>
+            </label>
+            <label class="label">
+                <input id="upload" type="file" name="filename" class="custom-file-input">
+                <!-- <input type="checkbox" name="filename" value="-">No Media File</input>
+                <button type="submit" class="">${title}</button> -->
+            </label>
+            <label class="label">
+              <input class="input-choose" type="checkbox" name="filename" value="-">No Media File</input>
+
+            </label>
+            <label class="label">
+              <button type="submit" class="">${title}</button>
+
+            </label>
+        </form>
+      </div>
+    </div>
 </div>

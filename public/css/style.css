@@ -43,6 +43,16 @@ body::-webkit-scrollbar {
     padding: 12px;
 }
 
+.item-choose {
+    background-color:white;
+    color: #800080;
+}
+
+#file-upload-button {
+    background-color: #800080;
+    color: #800080;
+}
+
 .login-wrapper {
     display: flex;
     justify-content: center; 
@@ -97,7 +107,7 @@ input {
     border-top-style: hidden;
     border-right-style: hidden;
     border-left-style: hidden;
-    border-bottom-style: groove;
+    /* border-bottom-style: groove; */
     background-color: #eee;
   }
 
@@ -145,8 +155,86 @@ button {
 }
 
 
+.uploads {
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+select {
+    /* padding: 2px; */
+    border: 0px;
+    outline: 0px;
+
+}
+
+.label-1 {
+    display: flex;
+    justify-content: center; 
+    padding: 8px;
+    /* margin-right: 2px; */
+}
+
+.language {
+    padding: 4px;
+}
+
+.title {
+    font-size: medium;
+    background-color: white;
+    color: #800080;
+    font-family: 'Noto Sans TC', sans-serif;
+
+}    
 
 
+
+
+
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+  background-color: white;
+}
+.custom-file-input::before {
+    background-color: white;
+  content: 'Choose file';
+  display: inline-block;
+  /* background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3); */
+  /* border: 1px solid #999; */
+  border-radius: 3px;
+  /* padding: 5px 8px; */
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  /* font-weight: 700; */
+  font-size: medium;
+  font-family: 'Noto Sans TC', sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  /* width: 100%; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+.custom-file-input:hover::before {
+  border-color: #800080;
+  background-color: white;
+  
+}
+.custom-file-input:active::before {
+    background-color: white;
+  /* background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); */
+}
+
+.input-choose {
+    border-bottom-style: groove ;
+}
 
 
 

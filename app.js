@@ -3,7 +3,7 @@ const path = require("path");
 const hostname = "127.0.0.1";
 const port = 3000;
 
-
+const multer = require("multer");
 const fileUpload = require("express-fileupload");
 const morgan = require("morgan");
 
@@ -38,6 +38,16 @@ app.use(
         is_logged_in: false 
     })
 );
+
+const storage = multer.diskStorage({
+    destination: function(req, file, cb) {
+        cb(null, 'media/');
+    },
+    filename: function(req, file, cb) {
+        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+    }
+});
+
 
 app.use(fileUpload({
 

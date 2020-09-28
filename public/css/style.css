@@ -12,7 +12,7 @@ html {
     background-color: #800080;
     color: #efefef;
     /* margin: 0 auto 8px; */
-    /* position: fixed; */
+    /* position: absolute; */
     /* top: 0; */
     /* display: flex; */
     /* flex-direction: column; */
@@ -111,6 +111,10 @@ input {
     background-color: #eee;
   }
 
+input#upload {
+    background-color: white;
+}
+
 input:focus {
     outline: none;
 }
@@ -170,6 +174,12 @@ select {
     border: 0px;
     outline: 0px;
 
+}
+
+select.select {
+    background-color: #efefef;
+    font-family: 'Noto Sans TC', sans-serif;
+    padding-left: 8px;
 }
 
 .label-1 {
@@ -234,6 +244,52 @@ select {
 
 .input-choose {
     border-bottom-style: groove ;
+}
+
+/* ABOUT PAGE */
+
+.creator-pic {
+    /* border-radius: 50%; */
+    width: 30%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.creators-wrapper > div{
+ width: 100%;
+ margin: 16px auto;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 16px 8px;
+ max-width: 800px;
+
+}
+
+.creators-wrapper { 
+    color: #464345;
+    margin: 32px 0;
+    padding-top: 80px;
+    width: 100%;
+    height: auto;
+    background: #efefef;
+  
+    align-items: center;
+}
+
+.github {
+    color: #800080;
+    
+    font-weight: 700;
+    font-size: large;
+}
+.github:hover {
+    color: #b491c8;
+    transition: .3s;
+}
+
+.github:visited {
+    color: 428CD4;
 }
 
 

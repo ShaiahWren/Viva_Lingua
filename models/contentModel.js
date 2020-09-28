@@ -13,7 +13,7 @@ class PostsModel {
 
     static async getAllPosts() {
         try {
-            const response = await db.any(`SELECT * FROM users INNER JOIN posts ON users.id = posts.user_id;`);
+            const response = await db.any(`SELECT * FROM users INNER JOIN posts ON users.id = posts.user_id ORDER BY posts.id DESC;`);
             //console.log(response);
             return response;
         } catch (error) {
@@ -36,7 +36,7 @@ class PostsModel {
 
     static async getDynPost(user_id) {
         try {
-            const response = await db.any(`SELECT * FROM posts INNER JOIN users ON users.id = posts.user_id WHERE user_id = ${user_id}`)
+            const response = await db.any(`SELECT * FROM posts INNER JOIN users ON users.id = posts.user_id WHERE user_id = ${user_id} ORDER BY posts.id DESC`)
             console.log("Dynamic Posts: ", response);
             return response;
         } catch(error) {

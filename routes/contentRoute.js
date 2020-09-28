@@ -47,7 +47,9 @@ router.get("/content", async function (req, res, next) {
 
 
   router.get("/languages", async function (req, res) {
-    const postsData = await PostsModel.getDynLang();
+    const { language } = req.body;
+    console.log("REQ BODY IS", req.body);
+    const postsData = await PostsModel.getDynLang(language);
     console.log("DYN POSTTTTS DATA: ", postsData)
     res.render("template", {
         locals: {

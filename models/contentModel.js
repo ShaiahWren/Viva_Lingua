@@ -13,7 +13,7 @@ class PostsModel {
 
     static async getAllPosts() {
         try {
-            const response = await db.any(`SELECT * FROM users INNER JOIN posts ON users.id = posts.user_id ORDER BY posts.id DESC;`);
+            const response = await db.any(`SELECT * FROM users INNER JOIN posts ON users.id = posts.user_id INNER JOIN languages ON posts.language = languages.id ORDER BY posts.id DESC;`);
             //console.log(response);
             return response;
         } catch (error) {
@@ -45,9 +45,9 @@ class PostsModel {
         }
     }
 
-    static async getDynLang() {
+    static async getDynLang(language) {
         try {
-            const response = await db.any(`SELECT * FROM posts LEFT JOIN users ON posts.user_id = users.id WHERE language = 1;`)
+            const response = await db.any(`SELECT * FROM posts LEFT JOIN users ON posts.user_id = users.id WHERE language = ${language};`)
             return response;
 
         } catch(error) {

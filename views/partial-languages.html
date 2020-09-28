@@ -59,34 +59,26 @@
       <p></p>
    </header> 
  
- 
-<<<<<<< HEAD
+ <form action="/languages" method="GET" id="selectLang">
  <label class="label-1">
-   SELECT A LANGUAGE
-    <select class="select">
-=======
- 
-  <label>
-    <select>
->>>>>>> 456dcb792666b5b280abdf1975cd6acddef95d59
-      <option value="3">Afrikaans</option>
-      <option value="4">Yiddish</option>
-      <option value="2">Mi'kmaq</option>
-      <option value="1">Basque</option>
-    </select>
-<<<<<<< HEAD
 
- </label>
+   SELECT A LANGUAGE
+    <select name="" class="select">
+      <option value="3" name="language">Afrikaans</option>
+      <option value="4" name="language">Yiddish</option>
+      <option value="2" name="language">Mi'kmaq</option>
+      <option value="1" name="language">Basque</option>
+    </select>
+</label>
+<button type="submit">Submit</button>
+</form>
  
-=======
- </label>
->>>>>>> 456dcb792666b5b280abdf1975cd6acddef95d59
  
  
  
  <div class="card">
 <section class="profilePosts"> ${data.map(post => {
-        return `<div class="divcard"><div><h3 class="username"><strong>${post.user_name}</strong></h3></div>
+        return `<div class="divcard"><div><h3 class="username"><strong>${post.user_name}</strong></h3></div> ${post.language_name}
         <h4 class="poststitle">${post.title}</h4>
         <div><p class="description">${post.description}</p></div></div>`
     }).join('')}</section>

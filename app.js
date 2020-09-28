@@ -31,7 +31,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(
     session({
-        store: new FileStore(),
         secret: "super cool",
         resave: false,
         saveUninitialized: true,
@@ -67,7 +66,7 @@ server.listen(port, hostname, () => {
 const usersController = require("./routes/usersRoute");
 const indexController = require("./routes/index");
 const uploadController = require("./routes/contentRoute");
-const scripts = require('./scripts');
+
 //const bulma
 
 // Use Controllers

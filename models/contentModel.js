@@ -13,7 +13,7 @@ class PostsModel {
 
     static async getAllPosts() {
         try {
-            const response = await db.any(`SELECT * FROM users INNER JOIN posts ON users.id = posts.user_id;`);
+            const response = await db.any(`SELECT * FROM users INNER JOIN posts ON users.id = posts.user_id ORDER BY posts.id DESC;`);
             //console.log(response);
             return response;
         } catch (error) {

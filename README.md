@@ -3,13 +3,14 @@ Overview:
 
 
 The Team:
-Dylan Cooper: https://github.com/Dcooper15
+
+Shaiah:
 Primary Team Role: 
 
 Contributions: 
 
+Dylan Cooper: https://github.com/Dcooper15
 
-Shaiah:
 Primary Team Role: 
 
 Contributions: 
@@ -32,7 +33,8 @@ Languages:
 HTML5
 CSS
 JavaScript
-JSON
+Node.js
+Express
 
 
 MVP (Minimum Viable Product):
@@ -40,11 +42,6 @@ MVP (Minimum Viable Product):
 Stretch Goals Completed:
 
 Stretch Goals Future:
-Additional Preferences Selections
-Additional Information Displayed
-Add Cross-browser Funtionaility for CSS Keyframes
-Images from Location
-Operating Hours
-Additional Cities
+
 
 Challenges & Solutions:

@@ -60,6 +60,22 @@ router.get("/content", async function (req, res, next) {
         }
     });
 });
+  // router.get("/languages", async function (req, res) {
+  //   const { language } = req.body;
+  //   console.log("REQ BODY IS", req.body);
+  //   const postsData = await PostsModel.getDynLang(language);
+  //   console.log("DYN POSTTTTS DATA: ", postsData)
+  //   res.render("template", {
+  //       locals: {
+  //           title: "Languages",
+  //           data: postsData,
+  //           is_logged_in: req.session.is_logged_in
+  //       },
+  //       partials: {
+  //           partial: "partial-languages"
+  //       }
+  //   });
+  // });
 
   router.post("/", async function (req, res) {
       const { user_id } = req.session;

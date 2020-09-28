@@ -11,6 +11,7 @@ html {
 .header {
     background-color: #800080;
     color: #efefef;
+    height: 201px;
     /* margin: 0 auto 8px; */
     /* position: absolute; */
     /* top: 0; */
@@ -25,7 +26,8 @@ html {
 body {
     background: #efefef;
     color: #800080;
-    margin: 0;
+    margin: 0 auto;
+    width: 100%;
 }
 
 body::-webkit-scrollbar {
@@ -128,13 +130,21 @@ button {
     border-radius: 4px;
 }
 
+.lang-button {
+    background-color: #800080;
+    color: #efefef;
+    width: 150px;
+    padding: 8px;
+    font-weight: bolder;
+    border-radius: 4px;
+    margin: 0 auto;
+}
+
 
 
 .navbar-end {
     margin: 0;
     width: 100%;
-    text-align: right;
-    /* padding-top: 8px; */
 }
 
 .card1 {
@@ -142,11 +152,12 @@ button {
     width: fit-content;
 }
 
-.wrapper {
+.prof-wrapper {
     /* width: 100%;
     margin: 0 auto; */
     display: flex;
     justify-content: center;
+    padding-top: 24px;
     
 }
 
@@ -249,7 +260,7 @@ select.select {
 /* ABOUT PAGE */
 
 .creator-pic {
-    /* border-radius: 50%; */
+    border-radius: 50%;
     width: 30%;
     height: auto;
     margin: 0 auto;
@@ -296,6 +307,12 @@ select.select {
     margin-right: 2%;
 }
 
+
+img-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    /* height: 300px; */
+}
 
 
 
@@ -524,16 +541,19 @@ profile posts */
     width: 100%;
 }
 
-.navbar-menu {
-    margin-left: 0;
-    text-align: center;
+#navbarBasicExample.navbar-menu {
+    /* margin-right: 300px; */
+    /* text-align: right; */
     /* padding: 8px; */
+    /* display: flex; */
+
 }
 
 .navbar-item {
     color: #efefef;
     text-decoration: none;
-    padding: 8px;
+    padding: 4px;
+
 }
 .navbar-brand {
     display: flex;
@@ -544,11 +564,17 @@ profile posts */
 }
 
 .logo {
-    float: left;
+    float: right;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
 }
 
 .links {
     padding: 8px;
+    /* height: 201px; */
+    /* margin-left: 290px; */
+  
 }
 
 
@@ -577,19 +603,79 @@ profile posts */
     text-decoration: underline;
 }
 
+.card-wrap {
+    width: 100%;
+    margin: 0 auto;
+}
+
 .divcard {
-    margin: 50px auto;
-    width: 500px;
+    /* margin: 50px 0; */
+    margin: 30px auto;
+    max-width: 500px;
+    min-width: 60px;
     height: 250px;
-    padding: 0px 34px;
-    padding-top: 16px;
+    padding: 8px 16px;
     background-color: white;
     border-radius: 8px;
 }
 
 
+/* Media QUERIES */
 
+@media only screen and (min-width: 320px) {
+    .navbar-item {
+        color: #efefef;
+        text-decoration: none;
+        padding: 3px;   
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    .links {
+        padding: 8px;
+        /* height: 201px; */
+        margin-left: 15px;
+      
+    }
+  }
 
+  @media only screen and (min-width: 768px) {
+    .navbar-item {
+        color: #efefef;
+        text-decoration: none;
+        padding: 3px;   
+        /* font-size: 20px; */
+        /* display: flex;
+        flex-direction: row; */
+    }
+    .links {
+        padding: 8px;
+        /* height: 201px; */
+        margin-left: 210px;
+      
+    }
+  }
+
+  @media only screen and (min-width: 960px) {
+    .navbar-item {
+        color: #efefef;
+        text-decoration: none;
+        padding: 3px;   
+        /* font-size: 20px; */
+        /* display: flex;
+        flex-direction: row; */
+    }
+    .links {
+        padding: 8px;
+        /* height: 201px; */
+        margin-left: 550px;
+      
+    }
+  }
+
+  
+
+ 
 
 
 

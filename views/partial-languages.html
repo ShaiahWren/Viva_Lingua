@@ -1,92 +1,87 @@
  
-  <header class="header">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
+<header class="header">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        
+    
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+    
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-end">
+          <section class="logo">
+            <a >
+              <div class="img-wrapper"><img src="/images/vivalinguaNEW.jpg"></div>
+            </a>
+         
           
+          <div class="links">
+            <a class="navbar-item" href="/uploads/content">
+              Feed
+            </a>
+            <a class="navbar-item" href="/uploads/languages">
+              Languages
+            </a>
       
-          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
+            <a class="navbar-item" href="/uploads">
+              Create Post
+            </a>
       
-        <div id="navbarBasicExample" class="navbar-menu">
-          <div class="navbar-end">
-            <section class="logo">
-              <a >
-                <span><img src="/images/vivalinguaSMALL.jpg"></span>
-              </a>
-            </section>
+            <a class="navbar-item" href="/users/profile">
+              Profile
+            </a>
+      
+            <a class="navbar-item" href="/about">
+              About
+            </a>
+
             
-            <div class="links">
-              <a class="navbar-item" href="/uploads/content">
-                Feed
-              </a>
-              <a class="navbar-item" href="/uploads/languages">
-                Languages
-              </a>
-        
-              <a class="navbar-item" href="/uploads">
-                Create Post
-              </a>
-        
-              <a class="navbar-item" href="/users/profile">
-                Profile
-              </a>
-        
-              <a class="navbar-item" href="/about">
-                About
-              </a>
- 
+            <a class="navbar-item" href="/users/logout">
+              <strong>Log out</strong>
+            </a>
+          </section>
+    
+          </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
               
-              <a class="navbar-item" href="/users/logout">
-                <strong>Log out</strong>
-              </a>
-      
-            </div>
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <div class="buttons">
-                
-               
-              </div>
+             
             </div>
           </div>
-         
         </div>
-      </nav>
-      <p></p>
-   </header> 
+       
+      </div>
+    </nav>
+    <p></p>
+ </header> 
  
- 
-<<<<<<< HEAD
- <label class="label-1">
-   SELECT A LANGUAGE
-    <select class="select">
-=======
- 
-  <label>
-    <select>
->>>>>>> 456dcb792666b5b280abdf1975cd6acddef95d59
-      <option value="3">Afrikaans</option>
-      <option value="4">Yiddish</option>
-      <option value="2">Mi'kmaq</option>
-      <option value="1">Basque</option>
-    </select>
-<<<<<<< HEAD
+ <form action="/languages" method="GET">
+  <label class="label-1">
+    SELECT A LANGUAGE
+      <select class="select">
+        <option value="3" name="language">Afrikaans</option>
+        <option value="4" name="language">Yiddish</option>
+        <option value="2" name="language">Mi'kmaq</option>
+        <option value="1" name="language">Basque</option>
+      </select>
 
- </label>
+  </label>
+  <label class="label-1">
+    <button type="submit" class="lang-button">SUBMIT</button>
+  </label>
+</form>
  
-=======
- </label>
->>>>>>> 456dcb792666b5b280abdf1975cd6acddef95d59
  
  
  
  <div class="card">
 <section class="profilePosts"> ${data.map(post => {
-        return `<div class="divcard"><div><h3 class="username"><strong>${post.user_name}</strong></h3></div>
+        return `<div class="card-wrap"><div class="divcard"><div><h3 class="username"><strong>${post.user_name} ${post.language_name}</strong></h3></div>
         <h4 class="poststitle">${post.title}</h4>
-        <div><p class="description">${post.description}</p></div></div>`
+        <div><p class="description">${post.description}</p></div></div></div>`
     }).join('')}</section>

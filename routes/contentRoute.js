@@ -46,19 +46,40 @@ router.get("/content", async function (req, res, next) {
   });
 
 
-  router.get("/languages", async function (req, res) {
-    const postsData = await PostsModel.getDynLang();
-    console.log("DYN POSTTTTS DATA: ", postsData)
-    res.render("template", {
-        locals: {
-            title: "Languages",
-            data: postsData,
-            is_logged_in: req.session.is_logged_in
-        },
-        partials: {
-            partial: "partial-languages"
-        }
-    });
+//   router.get("/languages", async function (req, res) {
+//     const postsData = await PostsModel.getDynLang();
+//     console.log("DYN POSTTTTS DATA: ", postsData)
+//     res.render("template", {
+//         locals: {
+//             title: "Languages",
+//             data: postsData,
+//             is_logged_in: req.session.is_logged_in
+//         },
+//         partials: {
+//             partial: "partial-languages"
+//         }
+//     });
+// });
+
+router.get("/languages/:language_id?", async function (req, res) {
+  const { language_id } = req.params;
+  console.log("THE language is: ", language_id);
+  let the_language = language_id;
+  if (language_id === undefined) {
+    the_language = 1;
+  }
+  const postsData = await PostsModel.getDynLang(the_language);
+  console.log("DYN POSTTTTS DATA: ", postsData)
+  res.render("template", {
+      locals: {
+          title: "Languages",
+          data: postsData,
+          is_logged_in: req.session.is_logged_in
+      },
+      partials: {
+          partial: "partial-languages"
+      }
+  });
 });
   // router.get("/languages", async function (req, res) {
   //   const { language } = req.body;
@@ -76,6 +97,8 @@ router.get("/content", async function (req, res, next) {
   //       }
   //   });
   // });
+
+
 
   router.post("/", async function (req, res) {
       const { user_id } = req.session;

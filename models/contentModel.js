@@ -45,19 +45,40 @@ class PostsModel {
         }
     }
 
-    static async getDynLang() {
-        try {
-            const response = await db.any(`SELECT * FROM posts LEFT JOIN users ON posts.user_id = users.id INNER JOIN languages ON posts.language = languages.id WHERE language = 1;`)
-            return response;
+    // static async getDynLang() {
+    //     try {
+    //         const response = await db.any(`SELECT * FROM posts LEFT JOIN users ON posts.user_id = users.id WHERE language = 1;`)
+    //         return response;
 
+    //     } catch(error) {
+    //         console.error("DYN LANG ERROR: ", error.message);
+    //         return error.message;
+    //     }
+    // }
+    static async getDynLang(language) {
+        try {
+<<<<<<< HEAD
+            const response = await db.any(`SELECT * FROM posts LEFT JOIN users ON posts.user_id = users.id INNER JOIN languages ON posts.language = languages.id WHERE language = 1;`)
+=======
+            const response = await db.any(`SELECT * FROM posts LEFT JOIN users ON    posts.user_id = users.id WHERE language = ${language};`)
+>>>>>>> 89d0c7cb9db99b673879ab8401488f882a0a9a4a
+            return response;
         } catch(error) {
             console.error("DYN LANG ERROR: ", error.message);
             return error.message;
         }
     }
+<<<<<<< HEAD
     
 
+=======
+ 
+>>>>>>> 89d0c7cb9db99b673879ab8401488f882a0a9a4a
 }
+
+
+
+
 
 
 

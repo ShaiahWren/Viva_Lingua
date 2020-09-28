@@ -67,7 +67,7 @@ server.listen(port, hostname, () => {
 const usersController = require("./routes/usersRoute");
 const indexController = require("./routes/index");
 const uploadController = require("./routes/contentRoute");
-const scripts = require('./scripts');
+
 //const bulma
 
 // Use Controllers

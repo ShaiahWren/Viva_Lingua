@@ -236,6 +236,11 @@ select {
     border-bottom-style: groove ;
 }
 
+.profilepic {
+    text-align: left;
+    margin-right: 2%;
+}
+
 
 
 

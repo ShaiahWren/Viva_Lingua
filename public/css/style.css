@@ -291,6 +291,10 @@ select.select {
 .github:visited {
     color: 428CD4;
 }
+.profilepic {
+    text-align: left;
+    margin-right: 2%;
+}
 
 
 

@@ -46,20 +46,7 @@ router.get("/content", async function (req, res, next) {
   });
 
 
-//   router.get("/languages", async function (req, res) {
-//     const postsData = await PostsModel.getDynLang();
-//     console.log("DYN POSTTTTS DATA: ", postsData)
-//     res.render("template", {
-//         locals: {
-//             title: "Languages",
-//             data: postsData,
-//             is_logged_in: req.session.is_logged_in
-//         },
-//         partials: {
-//             partial: "partial-languages"
-//         }
-//     });
-// });
+
 
 router.get("/languages/:language_id?", async function (req, res) {
   const { language_id } = req.params;
@@ -81,22 +68,7 @@ router.get("/languages/:language_id?", async function (req, res) {
       }
   });
 });
-  // router.get("/languages", async function (req, res) {
-  //   const { language } = req.body;
-  //   console.log("REQ BODY IS", req.body);
-  //   const postsData = await PostsModel.getDynLang(language);
-  //   console.log("DYN POSTTTTS DATA: ", postsData)
-  //   res.render("template", {
-  //       locals: {
-  //           title: "Languages",
-  //           data: postsData,
-  //           is_logged_in: req.session.is_logged_in
-  //       },
-  //       partials: {
-  //           partial: "partial-languages"
-  //       }
-  //   });
-  // });
+
 
 
 
@@ -105,14 +77,7 @@ router.get("/languages/:language_id?", async function (req, res) {
     console.log("req session is: ", req.session)
     const { title, description, language, type } = req.body;
     const newId = parseInt(user_id);
-    // let upload = multer({storage: storage}).single('filename');
-    //   upload(req, res, function(err) {
-    //     if (err) {
-    //       console.log("callback error: ", err);
-    //       return err;
-    //     }
-    //     res.send(`You have uploaded this file: <img src="${req.filename.path}"`)
-    //   })
+    
     const uploadData = await PostsModel.postData(
       newId,
       title,
@@ -121,14 +86,7 @@ router.get("/languages/:language_id?", async function (req, res) {
       type,
       req.files.filename.name
     );
-    // console.log("REQ FILES ARE: ", req)
-    // fs.copyFile(`${req.files.filename.path}`, `/Users/dylancooper/Desktop/DigitalCrafts/VivaLingua/VivaLingua/public/media/3${req.files.filename.name}`, (error) => {
-    //   if (error)
-    //   //console.log("TEST ERROR; ", error);
-    //    throw error;  
-      
-    // });
- 
+  
 
     res.redirect('/uploads/content');
   });

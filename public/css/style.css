@@ -128,9 +128,11 @@ button {
     padding: 8px;
     font-weight: bolder;
     border-radius: 4px;
+    
 }
 
 .lang-button {
+    display: flex;
     background-color: #800080;
     color: #efefef;
     width: 150px;

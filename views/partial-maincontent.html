@@ -61,7 +61,7 @@
  </header>  
     <div class="card">
 <section class="profilePosts"> ${data.map(post => {
-        return `<div class="card-wrap"><div class="divcard"><div><h3 class="username"><strong>${post.user_name} ${post.language_name}</strong></h3></div>
+        return `<div class="card-wrap"><div class="divcard"><div><h3 class="username"><strong>${post.user_name} | Language: ${post.language_name}</strong></h3></div>
         <h4 class="poststitle">${post.title}</h4>
         <div><p class="description">${post.description}</p></div></div></div>`
     }).join('')}</section>

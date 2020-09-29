@@ -4,6 +4,7 @@ VivaLingua is a language crowdsourcing app. In this app you are able to create p
 
 The Team:
 
+
 Shaiah Wren: https://github.com/ShaiahWren
 Primary Team Role: PostgreSQL, Back-end & Front-end Development and Lead Syling/Design.
 
@@ -40,8 +41,12 @@ PostgreSQL
 Stretch Goals Completed:
 A stretch goal we completed was to add a specified language page that would pull the data for that language dynamically.
 
+
+
 Stretch Goals for the Future:
 A stretch goal that we are in the proccess of finishing is being able to upload media files and have them display dynamically. A styling stretch goal is to implement third-party CSS frameworks into node. 
+
+
 
 
 Challenges & Solutions:

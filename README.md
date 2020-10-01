@@ -5,8 +5,10 @@ VivaLingua is a language crowdsourcing app. In this app you are able to create p
 The Team:
 
 
+
 Shaiah Wren: https://github.com/ShaiahWren
 Primary Team Role: PostgreSQL, Back-end & Front-end Development and Lead Syling/Design.
+
 
 
 
@@ -17,8 +19,10 @@ Primary Team Role: PostgreSQL, Back-end & Front-end development.
 
 
 
+
 Aliyah Gamble: https://github.com/AGamble7
 Primary Team Role: Scrum Master, Back-end Development, and Styling.
+
 
 
 
@@ -29,13 +33,14 @@ Primary Team Role: Back-end Development, Debugging, and Design.
 
 
 
+
 Technologies Used:
-HTML5
-CSS
-JavaScript
-Node.js
-Express
-PostgreSQL
+HTML5,
+CSS,
+JavaScript,
+Node.js,
+Express,
+PostgreSQL,
 
 
 Stretch Goals Completed:

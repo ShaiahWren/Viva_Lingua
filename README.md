@@ -50,6 +50,7 @@ PostgreSQL,
 A stretch goal we completed was to implement front-end code to add a specified language page that would pull the data for that language dynamically.
 
 <br>
+<br>
 
 <strong>Stretch Goals for the Future:</strong>
 A stretch goal that we are in the proccess of finishing is being able to upload media files and have them display dynamically. A styling stretch goal is to implement third-party CSS frameworks into node. 

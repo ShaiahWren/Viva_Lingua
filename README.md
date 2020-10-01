@@ -1,43 +1,43 @@
 Overview:
-VivaLingua is a language crowdsourcing app. In this app you are able to create posts about a variety of endangered languages from all around the world to help revitalize them. You can also create a user profile, view your own posts, and view posts from other users uniquely from a specified language.
+<strong>VivaLingua</strong> is a language crowdsourcing app. In this app you are able to create posts about a variety of endangered languages from all around the world to help revitalize them. You can also create a user profile, view your own posts, and view posts from other users uniquely from a specified language.
 
 
 The Team:
 
 
 
-Shaiah Wren: https://github.com/ShaiahWren
+<strong>Shaiah Wren:</strong> https://github.com/ShaiahWren
 
-Primary Team Role: PostgreSQL, Back-end & Front-end Development and Lead Syling/Design.
+<strong>Primary Team Role:</strong> PostgreSQL, Back-end & Front-end Development and Lead Syling/Design.
 
-
-
-
-Dylan Cooper: https://github.com/Dcooper15
-
-Primary Team Role: PostgreSQL, Back-end & Front-end development.
+<br>
 
 
+<strong>Dylan Cooper:</strong> https://github.com/Dcooper15
 
+<strong>Primary Team Role:</strong> PostgreSQL, Back-end & Front-end development.
 
-
-Aliyah Gamble: https://github.com/AGamble7
-
-Primary Team Role: Scrum Master, Back-end Development, and Styling.
+<br>
 
 
 
+<strong>Aliyah Gamble:</strong> https://github.com/AGamble7
 
+<strong>Primary Team Role</strong>: Scrum Master, Back-end Development, and Styling.
 
-Annemarie Thomas: https://github.com/Athomas9sa
-
-Primary Team Role: Back-end Development, Debugging, and Design.
-
-
+<br>
 
 
 
-Technologies Used:
+<strong>Annemarie Thomas:</strong> https://github.com/Athomas9sa
+
+<strong>Primary Team Role:</strong> Back-end Development, Debugging, and Design.
+
+<br>
+
+
+
+<strong>Technologies Used:</strong>
 HTML5,
 CSS,
 JavaScript,
@@ -45,17 +45,17 @@ Node.js,
 Express,
 PostgreSQL,
 
-
-Stretch Goals Completed:
+<br>
+<strong>Stretch Goals Completed:</strong>
 A stretch goal we completed was to implement front-end code to add a specified language page that would pull the data for that language dynamically.
 
+<br>
 
-
-Stretch Goals for the Future:
+<strong>Stretch Goals for the Future:</strong>
 A stretch goal that we are in the proccess of finishing is being able to upload media files and have them display dynamically. A styling stretch goal is to implement third-party CSS frameworks into node. 
 
 
+<br>
 
-
-Challenges & Solutions:
+<strong>Challenges & Solutions:</strong>
 A big challenge for this project was to get the correct data to pull from our database and display dynamically on our various pages. We solved this problem by using a variety of SQL statements such as INNER JOINS, LEFT JOINS, and RIGHT JOINS to link our data tables properly.

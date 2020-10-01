@@ -7,6 +7,7 @@ The Team:
 
 
 Shaiah Wren: https://github.com/ShaiahWren
+
 Primary Team Role: PostgreSQL, Back-end & Front-end Development and Lead Syling/Design.
 
 
@@ -21,6 +22,7 @@ Primary Team Role: PostgreSQL, Back-end & Front-end development.
 
 
 Aliyah Gamble: https://github.com/AGamble7
+
 Primary Team Role: Scrum Master, Back-end Development, and Styling.
 
 
@@ -28,6 +30,7 @@ Primary Team Role: Scrum Master, Back-end Development, and Styling.
 
 
 Annemarie Thomas: https://github.com/Athomas9sa
+
 Primary Team Role: Back-end Development, Debugging, and Design.
 
 
@@ -44,7 +47,7 @@ PostgreSQL,
 
 
 Stretch Goals Completed:
-A stretch goal we completed was to add a specified language page that would pull the data for that language dynamically.
+A stretch goal we completed was to implement front-end code to add a specified language page that would pull the data for that language dynamically.
 
 
 

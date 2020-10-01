@@ -1,5 +1,5 @@
 <strong>Overview:</strong>
-<strong>VivaLingua</strong> is a language crowdsourcing app. In this app you are able to create posts about a variety of endangered languages from all around the world to help revitalize them. You can also create a user profile, view your own posts, and view posts from other users uniquely from a specified language.
+<strong><em>VivaLingua</em></strong> is a language crowdsourcing app. In this app you are able to create posts about a variety of endangered languages from all around the world to help revitalize them. You can also create a user profile, view your own posts, and view posts from other users uniquely from a specified language.
 
 
 <strong>The Team:</strong>
@@ -7,12 +7,14 @@
 
 
 <strong>Shaiah Wren:</strong> https://github.com/ShaiahWren
+<br>
 <strong>Primary Team Role:</strong> PostgreSQL, Back-end & Front-end Development and Lead Syling/Design.
 
 <br>
 
 
 <strong>Dylan Cooper:</strong> https://github.com/Dcooper15
+<br>
 <strong>Primary Team Role:</strong> PostgreSQL, Back-end & Front-end development.
 
 <br>
@@ -20,6 +22,7 @@
 
 
 <strong>Aliyah Gamble:</strong> https://github.com/AGamble7
+<br>
 <strong>Primary Team Role</strong>: Scrum Master, Back-end Development, and Styling.
 
 <br>
@@ -27,6 +30,7 @@
 
 
 <strong>Annemarie Thomas:</strong> https://github.com/Athomas9sa
+<br>
 <strong>Primary Team Role:</strong> Back-end Development, Debugging, and Design.
 
 <br>
